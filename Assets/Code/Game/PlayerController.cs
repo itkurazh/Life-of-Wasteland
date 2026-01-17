@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         else
             velocity *= _unit.Config.SpeedWalk;
 
-        _unit.Data.Velocity = Vector3.Lerp(_unit.Data.Velocity, velocity, UnitConstants.LERTP_VALUE * Time.deltaTime);
+        _unit.Data.Velocity = Vector3.Lerp(_unit.Data.Velocity, velocity, UnitConstants.LERP_VALUE * Time.deltaTime);
     }
 
     private void StopMove()

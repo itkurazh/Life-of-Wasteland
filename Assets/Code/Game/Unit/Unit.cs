@@ -16,7 +16,8 @@ public class Unit : Entity
     {
         base.Awake();
         
-        _data = new UnitData(_view);
+        _data = new UnitData();
+        _view.SetData(_data);
         
         _state = new Dictionary<StateID, StateBehaviour>()
         {

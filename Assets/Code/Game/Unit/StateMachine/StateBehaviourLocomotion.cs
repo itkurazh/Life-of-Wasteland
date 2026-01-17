@@ -9,6 +9,9 @@ public class StateBehaviourLocomotion : StateBehaviour
     public override void Enter()
     {
         base.Enter();
+        
+        Data.IsMoving = true;
+        Data.Direction = Data.Velocity.normalized;
     }
 
     public override void Update()
@@ -17,13 +20,17 @@ public class StateBehaviourLocomotion : StateBehaviour
 
         if (Data.Velocity != Vector3.zero)
         {
-            View.transform.rotation = Quaternion.LookRotation(Data.Velocity.normalized);
-            View.transform.Translate(Data.Velocity * Time.deltaTime, Space.World);
+            Data.Rotation = Data.Velocity.normalized;
+            Data.Position += Data.Velocity * Time.deltaTime;
         }
+        
+        Data.Direction = Data.Velocity.normalized;
     }
 
     public override void Exit()
     {
         base.Exit();
+        
+        Data.IsMoving = false;
     }
 }

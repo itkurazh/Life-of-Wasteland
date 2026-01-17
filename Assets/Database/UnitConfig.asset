@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b83b7dc03542878ccf5e2b55848693, type: 3}
   m_Name: UnitConfig
   m_EditorClassIdentifier: Assembly-CSharp::UnitConfig
-  SpeedWalk: 0.79
-  SpeedRun: 5
+  SpeedWalk: 1.56
+  SpeedRun: 3.4
