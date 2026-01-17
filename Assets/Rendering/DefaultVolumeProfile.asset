@@ -282,7 +282,7 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 3
   intensity:
     m_OverrideState: 1
     m_Value: 0
@@ -596,7 +596,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   neutralHDRRangeReductionMode:
     m_OverrideState: 1
     m_Value: 2
@@ -714,13 +714,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.LiftGammaGain
   active: 1
   lift:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   gain:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}
 --- !u!114 &2792417927023665876
 MonoBehaviour:
@@ -737,7 +737,7 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.51
   contrast:
     m_OverrideState: 1
     m_Value: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   gaussianStart:
     m_OverrideState: 1
     m_Value: 10

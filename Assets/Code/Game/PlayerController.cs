@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Unit _unit;
+    [SerializeField] private Transform _targetCamera;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
         {
             StopMove();
         }
+        
+        _targetCamera.position = Vector3.Lerp(_targetCamera.position, _unit.Data.Position, UnitConstants.LERP_VALUE * Time.deltaTime);
     }
 
     private void Move(GlobalDirection direction)

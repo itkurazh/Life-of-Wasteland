@@ -11,7 +11,6 @@ public class StateBehaviourLocomotion : StateBehaviour
         base.Enter();
         
         Data.IsMoving = true;
-        Data.Direction = Data.Velocity.normalized;
     }
 
     public override void Update()

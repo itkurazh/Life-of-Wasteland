@@ -34,8 +34,6 @@ public class Unit : Entity
 
     protected virtual void Update()
     {
-        StateMachine();
-        
         if(_data.Velocity != Vector3.zero)
         {
             SwitchState(StateID.Locomotion);
@@ -44,11 +42,13 @@ public class Unit : Entity
         {
             SwitchState(StateID.Idle);
         }
+        
+        StateMachine();
     }
     
     public void TeleportTo(Vector3 position)
     {
-     
+        _data.Position = position;
     }
 
     public void SwitchState(StateID newState)
