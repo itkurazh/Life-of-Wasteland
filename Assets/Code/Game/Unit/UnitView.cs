@@ -82,15 +82,17 @@ public partial class UnitView  : MonoBehaviour
 
     private void Locomotion()
     {
-        float direction = Vector3.Dot(_data.Direction, transform.right) * 180;
-        _animator.SetFloat(UnitConstants.ANIMATOR_DIRECTION, direction);
+        float directionFrom = _animator.GetFloat(UnitConstants.ANIMATOR_DIRECTION);
+        float directionTo = Vector3.Dot(_data.Direction, transform.right) * 180;
+        float startDirection = Vector3.Dot(_data.Direction, transform.forward);
+        
+        LerpTo(UnitConstants.ANIMATOR_DIRECTION, directionFrom, directionTo);
 
         if (_data.IsMoving && _animator.GetFloat(UnitConstants.ANIMATOR_START_DIRECTION) == 0)
         {
-            float startDirection = Vector3.Dot(_data.Direction, transform.forward);
             
             if(startDirection > 0)
-                _animator.SetFloat(UnitConstants.ANIMATOR_START_DIRECTION, direction);
+                _animator.SetFloat(UnitConstants.ANIMATOR_START_DIRECTION, directionTo);
             else
             {
                 if(_data.Direction.z < 0)
