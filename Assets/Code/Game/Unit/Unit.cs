@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Unit : Entity
 {
+    [SerializeField] private StateID _stateID;
+    
     public UnitData Data => _data;
     public UnitConfig Config => _config;
     
@@ -44,6 +46,8 @@ public class Unit : Entity
         }
         
         StateMachine();
+        
+        _stateID = _data.State;
     }
     
     public void TeleportTo(Vector3 position)
@@ -56,7 +60,8 @@ public class Unit : Entity
         if(_data.State == newState)
             return;
         
-        Debug.Log($"{transform.name} switched state from {_data.State} to {newState}");
+        if(IsEnabledDebug())
+            Debug.Log($"{transform.name} switched state from {_data.State} to {newState}");
         
         _state[_data.State].Exit();
         _data.State = newState;

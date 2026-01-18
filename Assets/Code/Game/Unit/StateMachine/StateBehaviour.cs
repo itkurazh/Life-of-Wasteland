@@ -15,7 +15,7 @@ public abstract class StateBehaviour
 
     public virtual void Enter()
     {
-        Debug.Log($"Entering {ID()}");
+        //Debug.Log($"Entering {ID()}");
     }
 
     public virtual void Update()
@@ -25,6 +25,6 @@ public abstract class StateBehaviour
 
     public virtual void Exit()
     {
-        Debug.Log($"Exit {ID()}");
+        //Debug.Log($"Exit {ID()}");
     }
 }

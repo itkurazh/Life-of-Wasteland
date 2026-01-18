@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 311129074966685069}
+  m_Father: {fileID: 4116290876143716033}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &7738720488420341299
 GameObject:
@@ -62,6 +62,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 311129074966685069}
+  - {fileID: 5157130504751821993}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5064209029641525153
@@ -77,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   _unit: {fileID: 1192019028870551797}
+  _targetCamera: {fileID: 0}
 --- !u!1 &8306175941093160535
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +110,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 352520068806796678}
-  - {fileID: 5157130504751821993}
   m_Father: {fileID: 4116290876143716033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1192019028870551797
@@ -123,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b1ae839804c81746ae10bdef652a7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Unit
+  _isEnabledDebug: 0
   _view: {fileID: 2701961747203118986}
   _config: {fileID: 11400000, guid: 2bb7ad17d51c1c941ab00208969c0ced, type: 2}
 --- !u!1001 &7509112100738252784
@@ -263,3 +265,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c229d5b13f964e128b5c8148e5b0810b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitView
+  _animator: {fileID: 0}
+  Timer: 0

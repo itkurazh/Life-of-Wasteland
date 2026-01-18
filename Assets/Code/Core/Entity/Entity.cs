@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public partial class Entity : MonoBehaviour
 {
     protected virtual void Awake()
     {
